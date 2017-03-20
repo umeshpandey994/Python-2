@@ -1,0 +1,7 @@
+from collections import Counter
+def is_palindrome_permutation(data):
+    num_odd = sum(1 for char, freq in Counter(data).items() if char != ' ' and freq % 2 == 1)
+    if num_odd == 1 and len(data) % 2 == 1 or num_odd == 0 and len(data) % 2 == 0:
+        return True
+    else:
+        return False
