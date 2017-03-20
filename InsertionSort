@@ -1,0 +1,13 @@
+def insertionSort(li):
+   for i in range(1,len(li)):
+
+     currentvalue = li[i]
+     position = i
+
+     while position>0 and li[position-1]>currentvalue:
+         li[position]=li[position-1]
+         position = position-1
+
+     li[position]=currentvalue
+
+   print ' '.join(str(e) for e in li)
